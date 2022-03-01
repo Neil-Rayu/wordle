@@ -1,12 +1,8 @@
 <script>
-	export let letter = null;
+	export let letter = '';
 </script>
 
-{#if letter != null}
-	<div class="input-box">{letter}</div>
-{:else}
-	<div class="input-box" />
-{/if}
+<div class="input-box">{letter}</div>
 
 <style>
 	.input-box {
