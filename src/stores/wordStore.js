@@ -1,6 +1,14 @@
 import { writable } from 'svelte/store';
+function getRandomItem(arr) {
+	// get random index value
+	const randomIndex = Math.floor(Math.random() * arr.length);
 
-let answer = ['p', 'o', 'w', 'e', 'r'];
+	// get random item
+	const item = arr[randomIndex];
+
+	return item;
+}
+
 const englishWords = [
 	'aback',
 	'abase',
@@ -2503,6 +2511,7 @@ const englishWords = [
 	'zones'
 ];
 
+let answer = getRandomItem(englishWords);
 export let letterBoard = writable([
 	[
 		{ letter: '', correct: 0, state: 1 },
